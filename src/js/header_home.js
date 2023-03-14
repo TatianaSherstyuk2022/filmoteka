@@ -83,7 +83,6 @@ async function onSearchClick(event) {
         pagination.off('afterMove', onPaginationBtnClick);
 
         pagination.on('afterMove', e => {
-          console.log(e.page);
           filmApi.page = e.page;
 
           filmApi.fetchFilmsByQuery().then(data => {

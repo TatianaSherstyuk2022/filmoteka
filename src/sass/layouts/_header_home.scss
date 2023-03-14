@@ -1,38 +1,47 @@
+
 .header {
-  position: relative;
-  height: 230px;
+width: 100%;
+  min-height: 230px;
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.20)),
+    url(../images/header_home/header-bg-main-mobile.jpg);
+  background-color: #000000;
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(../images/header_home/header-home-mobil-1x.jpg);
 
-  @media (min-device-pixel-ratio: 2),
-    (-webkit-min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: url(../images/header_home/header-home-mobil-2x.jpg);
+  @media screen and (max-width: (767px)) and (min-device-pixel-ratio: 2),
+  screen and (max-width: (767px)) and (min-resolution: 192dpi),
+  screen and (max-width: (767px)) and (min-resolution: 2dppx) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.20)),
+      url(../images/header_home/header-bg-main-mobile@2x.jpg);
   }
-  @media screen and (min-width: 768px) {
-    height: 219px;
-    background-image: url(../images/header_home/header-home-tablet-1x.jpg);
 
-    @media (min-device-pixel-ratio: 2),
-      (-webkit-min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: url(../images/header_home/header-home-tablet-1x.jpg);
+  @media screen and (min-width: 768px) {
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.20)),
+      url(../images/header_home/header-bg-main-tablet.jpg);
+
+    @media screen and (max-width: (1279px)) and (min-device-pixel-ratio: 2),
+    screen and (max-width: (1279px)) and (min-resolution: 192dpi),
+    screen and (max-width: (1279px)) and (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.20),
+          rgba(0, 0, 0, 0.20)),
+        url(../images/header_home/header-bg-main-tablet@2x.jpg);
     }
   }
+
   @media screen and (min-width: 1280px) {
-    max-width: 1600px;
-    height: 216px;
-    margin: 0 auto;
-    background-image: url(../images/header_home/header-home-desktop-1x.jpg);
-    @media (min-device-pixel-ratio: 2),
-      (-webkit-min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: url(../images/header_home/header-home-desktop-2x.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.20)),
+      url(../images/header_home/header-bg-main-desktop.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.20),
+          rgba(0, 0, 0, 0.20)),
+        url(../images/header_home/header-bg-main-desktop@2x.jpg);
     }
   }
 }
