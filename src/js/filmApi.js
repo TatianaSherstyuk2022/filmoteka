@@ -14,7 +14,6 @@ export class FilmAPI {
   async getGenresList() {
     const params = {
       params: {
-        // _page: this.page,
         api_key: FilmAPI.API_KEY,
       },
     };
@@ -34,20 +33,7 @@ export class FilmAPI {
     };
     return axios.get(`${FilmAPI.BASE_URL}trending/movie/week`, searchParams);
   }
-  // async fetchTrendingFilms() {
-  //   const params = {
-  //     params: {
-  //       // _page: this.page,
-  //       api_key: FilmAPI.API_KEY,
-  //     },
-  //   };
-  //   const response = await axios.get(
-  //     `${FilmAPI.BASE_URL}trending/movie/week`,
-  //     params
-  //   );
-  //   console.log(response.data);
-  //   // return response.data;
-  // }
+
 
   async fetchFilmsByQuery() {
     const params = {
@@ -58,8 +44,6 @@ export class FilmAPI {
       },
     };
     const response = await axios.get(`${FilmAPI.BASE_URL}search/movie`, params);
-    // console.log(response.data);
-    // pagination.setTotalItems(response.data.total_items);
     return response.data;
   }
 
@@ -77,6 +61,3 @@ export class FilmAPI {
     return response;
   }
 }
-
-// const filmApi = new FilmAPI();
-// filmApi.fetchTrendingFilms();
